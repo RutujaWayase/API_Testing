@@ -1,5 +1,5 @@
 {
-    "students":{
+    "students":[
         {
             "id": 1,
             "name": "John",
@@ -31,5 +31,5 @@
                 "RestAPI"
             ]
         }
-    }
+    ]
 }
