@@ -62,8 +62,16 @@ Workspace -> Collections -> Requests
 
 3)	Environment => accessible in all collections, but we need to switch to environment.
 
-4)	Local => declared inside Pre-request Script i.e. Request -> Scripts -> Pre-request.
+4)	Local => accessible only within request(specific to request). Declared inside Pre-request Script i.e. Request -> Scripts -> Pre-request.
+
+Ex: //Local variables
+pm.variables.set("url_local", "https://reqres.in");
 
 5)	Data => external files csv/text.
 
 Referring variable: {{variable}}
+
+Methods:
+
+Set, unset, get => global, env, collection, local.
+

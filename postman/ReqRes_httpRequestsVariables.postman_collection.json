@@ -19,7 +19,16 @@
 									"console.log(\"pre-request script at request level\");\r",
 									"\r",
 									"//Local variables\r",
-									"pm.variables.set(\"url_local\", \"https://reqres.in\");"
+									"pm.variables.set(\"url_local\", \"https://reqres.in\");\r",
+									"\r",
+									"//Global variables\r",
+									"pm.globals.set(\"userid_globals\",\"2\");\r",
+									"\r",
+									"//Environment variable\r",
+									"pm.environment.set(\"userid_qa_env\",\"2\");\r",
+									"\r",
+									"//Collection variable\r",
+									"pm.collectionVariables.set(\"userid_collect\",\"2\");"
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -29,7 +38,23 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"console.log(\"Test script at request level\");"
+									"console.log(\"Test script at request level\");\r",
+									"\r",
+									"console.log(pm.globals.get(\"userid_globals\"));\r",
+									"console.log(pm.environment.get(\"userid_qa_env\"));\r",
+									"console.log(pm.collectionVariables.get(\"userid_collect\"));\r",
+									"console.log(pm.variables.get(\"url_local\"));\r",
+									"\r",
+									"\r",
+									"//Global variables\r",
+									"pm.globals.unset(\"userid_globals\");\r",
+									"/*\r",
+									"//Environment variable\r",
+									"pm.environment.unset(\"userid_qa_env\");\r",
+									"\r",
+									"//Collection variable\r",
+									"pm.collectionVariables.unset(\"userid_collect\");\r",
+									"*/"
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -40,7 +65,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url_local}}/api/users?page=2",
+							"raw": "{{url_local}}/api/users?page={{url_local}}",
 							"host": [
 								"{{url_local}}"
 							],
@@ -51,7 +76,7 @@
 							"query": [
 								{
 									"key": "page",
-									"value": "2"
+									"value": "{{url_local}}"
 								}
 							]
 						}
@@ -184,6 +209,10 @@
 			"key": "url_collect",
 			"value": "https://reqres.in",
 			"type": "string"
+		},
+		{
+			"key": "userid_collect",
+			"value": ""
 		}
 	]
 }
