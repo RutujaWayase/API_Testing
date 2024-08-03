@@ -51,3 +51,19 @@ Palyload: Body in the HTTP request and response message.
 1) Request Payload.
 2) Response Payload.
 
+# Postman:
+Variables:
+Scope:
+Workspace -> Collections -> Requests
+ Types of variables as per Scope of access of variables:
+1)	Global => accessible in workspace.
+
+2)	Collection => accessible within collection.
+
+3)	Environment => accessible in all collections, but we need to switch to environment.
+
+4)	Local => declared inside Pre-request Script i.e. Request -> Scripts -> Pre-request.
+
+5)	Data => external files csv/text.
+
+Referring variable: {{variable}}

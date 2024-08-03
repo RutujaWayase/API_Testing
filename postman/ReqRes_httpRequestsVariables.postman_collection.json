@@ -16,7 +16,10 @@
 							"listen": "prerequest",
 							"script": {
 								"exec": [
-									"console.log(\"pre-request script at request level\");"
+									"console.log(\"pre-request script at request level\");\r",
+									"\r",
+									"//Local variables\r",
+									"pm.variables.set(\"url_local\", \"https://reqres.in\");"
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -37,9 +40,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url_dev_env}}/api/users?page=2",
+							"raw": "{{url_local}}/api/users?page=2",
 							"host": [
-								"{{url_dev_env}}"
+								"{{url_local}}"
 							],
 							"path": [
 								"api",
