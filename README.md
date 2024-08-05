@@ -75,3 +75,29 @@ Methods:
 
 Set, unset, get => global, env, collection, local.
 
+# RestAssured 
+
+RestAssured: https://rest-assured.io/
+
+Dependencies: https://github.com/rest-assured/rest-assured/wiki/GettingStarted
+
+Add dependencies: Maven, Gradle, XmlPath, etc.
+
+Dependencies to add in pom.xml:
+1)	rest-assured
+
+2)	json-path
+
+3)	json
+
+4)	gson
+
+5)	testng
+
+6)	scribejava-apis
+
+7)	json-schema-validator
+
+8)	xml-schema-validator
+
+
