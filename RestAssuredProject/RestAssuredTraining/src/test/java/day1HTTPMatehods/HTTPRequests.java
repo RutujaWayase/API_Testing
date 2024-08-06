@@ -20,6 +20,9 @@ then():
 
 public class HTTPRequests {
 	
+	
+	int id;
+	
 	//using testng test
 	//for single user
 	
@@ -36,23 +39,56 @@ public class HTTPRequests {
 		 .log().all();
 	}
 	
-	@Test
+	@Test(priority=2)
 	void createUser() {
 		HashMap data = new HashMap(); //hashmap is in key value pair
 		data.put("name", "rutuja");
 		data.put("job", "sdet");
 		
-		given()
-		     .contentType("application.json")
+		id = given()
+		     .contentType("application/json")
 		     .body(data)
 		     
 		.when()
 		     .post("https://reqres.in/api/users")
-		     
+		     .jsonPath().getInt("id");
+		
+	/*	     
 		.then()
 		     .statusCode(201)
 		     .log().all();
+    */
+		     
 	}
+	
+	@Test(priority=3,dependsOnMethods = {"createUser"})
+	void updateUser() {
+		HashMap data = new HashMap();
+		data.put("name", "John");
+		data.put("job", "SDE");
+		
+		given()
+				.contentType("application/json")
+				.body(data)
+		.when()
+		    .put("https://reqres.in/api/users/"+id)
+		.then()
+		    .statusCode(200)
+		    .log().all();
+		   
+				
+	}
+	
+	@Test(priority=4)
+	void deleteUser() {
+		given()
+		.when()
+		   .delete("https://reqres.in/api/users/"+id)
+		.then()
+		   .statusCode(204)
+		   .log().all();
+	}
+	
 	
 	
 	
