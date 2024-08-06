@@ -2,9 +2,12 @@ package day1HTTPMatehods;
 
 import org.testng.annotations.Test;
 
-import io.restassured.RestAssured.*;
-import io.restassured.matcher.RestAssuredMatchers.*;
-import org.hamcrest.Matchers.*;
+import static io.restassured.RestAssured.*;
+import static io.restassured.matcher.RestAssuredMatchers.*;
+import static org.hamcrest.Matchers.*;
+
+import java.util.HashMap;
+
 
 /*
 given():
@@ -20,13 +23,35 @@ public class HTTPRequests {
 	//using testng test
 	//for single user
 	
-	@Test
+	@Test(priority=1)
 	void getUser() {
 		given()
 		
 		.when()
+		 .get("https://reqres.in/api/users?page=2")
 		
 		.then()
+		 .statusCode(200)
+		 .body("page", equalTo(2))
+		 .log().all();
+	}
+	
+	@Test
+	void createUser() {
+		HashMap data = new HashMap(); //hashmap is in key value pair
+		data.put("name", "rutuja");
+		data.put("job", "sdet");
+		
+		given()
+		     .contentType("application.json")
+		     .body(data)
+		     
+		.when()
+		     .post("https://reqres.in/api/users")
+		     
+		.then()
+		     .statusCode(201)
+		     .log().all();
 	}
 	
 	
