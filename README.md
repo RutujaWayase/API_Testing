@@ -109,3 +109,13 @@ TestNG Style
 • then(): validate status code, extract response, extract headers cookies & response body
 
 
+Ways to create request body:
+1)	Hashmap
+
+2)	Using org.json
+
+3)	Using POJO (Plain Old Java Object)
+
+4)	Using external json file
+
+
