@@ -176,7 +176,7 @@ public class DiffWaysToCreatePostRequestBody {
 		      .delete("http://localhost:3000/students/2b50")
 		  .then()
 		      .statusCode(200);
-			  
+		    	  
 	}
 
 }

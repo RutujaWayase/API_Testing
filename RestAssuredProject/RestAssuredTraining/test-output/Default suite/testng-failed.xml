@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="day2POSTRequestPayload.DiffWaysToCreatePostRequestBody">
+      <class name="day3CookiesHeadersQueryPathParameters.CookiesDemo">
         <methods>
-          <include name="testDelete"/>
+          <include name="testCookies"/>
         </methods>
-      </class> <!-- day2POSTRequestPayload.DiffWaysToCreatePostRequestBody -->
+      </class> <!-- day3CookiesHeadersQueryPathParameters.CookiesDemo -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
