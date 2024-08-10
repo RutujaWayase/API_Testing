@@ -110,12 +110,12 @@ TestNG Style
 
 
 Ways to create request body:
-1)	Hashmap
+1)	Hashmap -> We can directly pass data. Ex: .body(data)
 
-2)	Using org.json
+2)	Using org.json -> We need to convert data to string format. Ex: .body(data.toString())
 
-3)	Using POJO (Plain Old Java Object)
+3)	Using POJO (Plain Old Java Object) -> Ex: .body(data)
 
-4)	Using external json file
+4)	Using external json file -> convert data to String format. Ex: .body(data.toString()) here data is received from external JSON file.
 
-
+toString() is only required for org.json class
