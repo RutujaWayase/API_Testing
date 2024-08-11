@@ -151,3 +151,17 @@ ObjectMapper objMapper = new ObjectMapper();
 			Student_POJO stupojo = objMapper.readValue(jsondata, Student_POJO.class); //convert json to pojo
 			
 
+# Types of Authorizations: 
+1)	Authentication: user credentials valid or not.
+
+2)	Authorization: user access permission.
+
+Authorization is only valid for Authenticated user i.e. first privacy primary security parameter is Authentication.
+
+Kinds of Authentication in Restassured:
+1) Basic
+2) Digest
+3) Preemptive
+4) Bearer Token
+5) oauth 1.0, 2.0
+6) API Key
