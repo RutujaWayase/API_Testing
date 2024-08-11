@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="day5ParsingXMLResponseBodyFileUploadDownloadAPI.ParsingXMLResponse">
+      <class name="day6JSONXMLSchemaValidationsSerialDEserilisation.xmlSchemaValidation">
         <methods>
-          <include name="testXMLResponse"/>
+          <include name="xmlSchemavalidation"/>
         </methods>
-      </class> <!-- day5ParsingXMLResponseBodyFileUploadDownloadAPI.ParsingXMLResponse -->
+      </class> <!-- day6JSONXMLSchemaValidationsSerialDEserilisation.xmlSchemaValidation -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

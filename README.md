@@ -130,3 +130,24 @@ Schema Validation:
 1)	Json Response (.json) -> Json Schema (.json)
 
 2)	XML Response (.xml) -> Xml Schema (.xsd)
+
+Serialization & De-serilization:
+1)	Serialization: pojo -> json
+
+2)	De-serilization: json -> pojo
+
+Serialation means => object -> Strem of Bytes -> File|Data Base|Memory -> Stream of Bytes -> Objrct (<=Deserization)
+
+Which class is used/how to convert pojo to json format?
+We need to import 'Jackson' package and ObjMapper class is used.
+
+Ex: import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+&
+
+ObjectMapper objMapper = new ObjectMapper();
+			
+			Student_POJO stupojo = objMapper.readValue(jsondata, Student_POJO.class); //convert json to pojo
+			
+
