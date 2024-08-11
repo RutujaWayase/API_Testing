@@ -119,3 +119,9 @@ Ways to create request body:
 4)	Using external json file -> convert data to String format. Ex: .body(data.toString()) here data is received from external JSON file.
 
 toString() is only required for org.json class
+
+toString() method: used to convert data in string format
+
+asString() method: used to convert entire response in string format
+
+getList() method: used to get multiple nodes
