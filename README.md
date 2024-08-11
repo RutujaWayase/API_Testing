@@ -125,3 +125,8 @@ toString() method: used to convert data in string format
 asString() method: used to convert entire response in string format
 
 getList() method: used to get multiple nodes
+
+Schema Validation:
+1)	Json Response (.json) -> Json Schema (.json)
+
+2)	XML Response (.xml) -> Xml Schema (.xsd)
