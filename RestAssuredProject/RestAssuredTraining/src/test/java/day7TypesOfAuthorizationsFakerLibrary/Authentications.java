@@ -19,6 +19,8 @@ public class Authentications {
 		  .statusCode(200)
 		  .body("authenticated", equalTo(true))
 		  .log().all();
+
+		  
 		
 	}
 
