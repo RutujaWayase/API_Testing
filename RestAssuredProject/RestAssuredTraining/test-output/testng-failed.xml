@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="day6JSONXMLSchemaValidationsSerialDEserilisation.xmlSchemaValidation">
+      <class name="day7TypesOfAuthorizationsFakerLibrary.Authentications">
         <methods>
-          <include name="xmlSchemavalidation"/>
+          <include name="testBearerTokenAuthentication"/>
         </methods>
-      </class> <!-- day6JSONXMLSchemaValidationsSerialDEserilisation.xmlSchemaValidation -->
+      </class> <!-- day7TypesOfAuthorizationsFakerLibrary.Authentications -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
