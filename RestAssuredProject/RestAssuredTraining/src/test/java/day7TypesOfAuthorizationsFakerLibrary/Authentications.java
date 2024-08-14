@@ -65,7 +65,7 @@ public class Authentications {
 	
 	@Test(priority=4)
 	void testBearerTokenAuthentication() {
-		String bearerToken="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";
+		String bearerToken= "token id"//"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";
 
 		given()
 		  .header("Authorization", "Bearer"+bearerToken)
