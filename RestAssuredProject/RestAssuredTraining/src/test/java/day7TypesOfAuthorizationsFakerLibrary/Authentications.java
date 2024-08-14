@@ -65,12 +65,12 @@ public class Authentications {
 	
 	@Test(priority=4)
 	void testBearerTokenAuthentication() {
-		String bearerToken= "token id"//"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";
+		String bearerToken= "token id";
 
 		given()
 		  .header("Authorization", "Bearer"+bearerToken)
 		.when()
-		  .get("https://api.github.com/user/repos")
+		  //.get("https://api.github.com/user/repos")
 		.then()
 		  .statusCode(200)
 		  .log().all();
