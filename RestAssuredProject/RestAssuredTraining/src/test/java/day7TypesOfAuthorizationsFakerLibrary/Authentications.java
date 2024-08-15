@@ -76,5 +76,16 @@ public class Authentications {
 		  .log().all();
 		
 	}
+	
+	@Test(priority=5)
+	void testOAuth1Authentication() {
+		given()
+		  .auth().oauth("consumerKey", "consumerSecret", "accessToken", "tokenSecrate ")
+		.when()
+		  .get("url")
+		.then()
+		  .statusCode(200)
+		  .log().all();
+	}
 
 }

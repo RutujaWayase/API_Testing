@@ -165,3 +165,18 @@ Kinds of Authentication in Restassured:
 4) Bearer Token
 5) oauth 1.0, 2.0
 6) API Key
+
+oauth 1.0 authentication: 
+
+Synatx:
+
+void testOAuth1Authentication() {
+		given()
+		  .auth().oauth("consumerKey", "consumerSecret", "accessToken", "tokenSecrate ")
+		.when()
+		  .get("url")
+		.then()
+		  .statusCode(200)
+		  .log().all();
+	}
+
