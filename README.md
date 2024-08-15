@@ -170,6 +170,8 @@ oauth 1.0 authentication:
 
 Synatx:
 
+&
+
 void testOAuth1Authentication() {
 		given()
 		  .auth().oauth("consumerKey", "consumerSecret", "accessToken", "tokenSecrate ")
@@ -180,3 +182,25 @@ void testOAuth1Authentication() {
 		  .log().all();
 	}
 
+oauth 2.0 authentication:
+Syntax:
+
+&
+
+void testOAuth2Authentication() {
+		given()
+		  .auth().oauth2("ghp_24pH....") //access token  
+		.when()
+		   .get("https://api.github.com/user/repos")
+		.then()
+		  .statusCode(200)
+		  .log().all();
+	}
+
+URL: https://api.openweathermap.org/data/2.5/forecast/daily?q=Delhi&units=metric&cnt=7
+
+https://api.openweathermap.org/ : Domain
+
+data/2.5/forecast/daily : Path parameter
+
+q=Delhi&units=metric&cnt=7 : Querry parameter (here there are 3 query parameters)

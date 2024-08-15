@@ -80,9 +80,32 @@ public class Authentications {
 	@Test(priority=5)
 	void testOAuth1Authentication() {
 		given()
-		  .auth().oauth("consumerKey", "consumerSecret", "accessToken", "tokenSecrate ")
+		  .auth().oauth("consumerKey", "consumerSecret", "accessToken", "tokenSecrate ") //this is for OAuth 1.0 authentication
 		.when()
 		  .get("url")
+		.then()
+		  .statusCode(200)
+		  .log().all();
+	}
+	
+	@Test(priority=6)
+	void testOAuth2Authentication() {
+		given()
+		  .auth().oauth2("ghp_24pH....") //access token  
+		.when()
+		   .get("https://api.github.com/user/repos")
+		.then()
+		  .statusCode(200)
+		  .log().all();
+	}
+	
+	@Test(priority=7)
+	void testAPIKeyAuthentication() {
+		given()
+		 .queryParam("appid", "440baa7b154f693e1bee2cac80a48561") //appid is APIKey
+		.when()
+		  //.get("https://api.openweathermap.org/data/2.5/forecast/daily?lat=57&lon=-2.15&appid={API key}")
+		  .get("https://api.openweathermap.org/data/2.5/forecast/daily?q=Delhi&units=metric&cnt=7")
 		.then()
 		  .statusCode(200)
 		  .log().all();

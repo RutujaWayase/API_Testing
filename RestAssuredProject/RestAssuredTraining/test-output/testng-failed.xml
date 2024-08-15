@@ -5,7 +5,9 @@
     <classes>
       <class name="day7TypesOfAuthorizationsFakerLibrary.Authentications">
         <methods>
-          <include name="testBearerTokenAuthentication"/>
+          <include name="testAPIKeyAuthentication"/>
+          <include name="testOAuth1Authentication"/>
+          <include name="testOAuth2Authentication"/>
         </methods>
       </class> <!-- day7TypesOfAuthorizationsFakerLibrary.Authentications -->
     </classes>
