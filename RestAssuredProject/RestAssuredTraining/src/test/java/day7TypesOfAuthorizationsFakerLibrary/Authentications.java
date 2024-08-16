@@ -101,11 +101,29 @@ public class Authentications {
 	
 	@Test(priority=7)
 	void testAPIKeyAuthentication() {
+		
+		//Method 1
+	/*
 		given()
 		 .queryParam("appid", "440baa7b154f693e1bee2cac80a48561") //appid is APIKey
 		.when()
 		  //.get("https://api.openweathermap.org/data/2.5/forecast/daily?lat=57&lon=-2.15&appid={API key}")
 		  .get("https://api.openweathermap.org/data/2.5/forecast/daily?q=Delhi&units=metric&cnt=7")
+		.then()
+		  .statusCode(200)
+		  .log().all();
+	*/
+		//Method 2
+		//https://api.openweathermap.org/data/2.5/forecast/daily?q=Delhi&units=metric&cnt=7
+		given()
+		  //.queryParam("appid", "440baa7b154f693e1bee2cac80a48561")
+		.queryParam("appid", "token value")
+		  .pathParam("mypath", "data/2.5/forecast/daily")
+		  .queryParam("q", "Delhi")
+		  .queryParam("units", "metric")
+		  .queryParam("cnt", "7")
+		.when()
+		  .get("https://api.openweathermap.org/{mypath}")
 		.then()
 		  .statusCode(200)
 		  .log().all();

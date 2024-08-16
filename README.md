@@ -166,11 +166,10 @@ Kinds of Authentication in Restassured:
 5) oauth 1.0, 2.0
 6) API Key
 
+
 oauth 1.0 authentication: 
 
 Synatx:
-
-&
 
 void testOAuth1Authentication() {
 		given()
@@ -183,9 +182,8 @@ void testOAuth1Authentication() {
 	}
 
 oauth 2.0 authentication:
-Syntax:
 
-&
+Syntax:
 
 void testOAuth2Authentication() {
 		given()
@@ -204,3 +202,44 @@ https://api.openweathermap.org/ : Domain
 data/2.5/forecast/daily : Path parameter
 
 q=Delhi&units=metric&cnt=7 : Querry parameter (here there are 3 query parameters)
+
+Faker Library: https://github.com/DiUS/java-faker
+
+1) JSON Object:
+ {
+
+}
+
+2) JSON Array:
+[
+
+]
+
+3) JSON Element: combination of json object and array
+
+JSON Object -> JSON Array -> JSON Object
+
+Senario 1:
+
+JSON Object -> JSON Array -> JSON Object
+
+JSONObject jo = new JSONObject(res.toString());
+
+jo.getJSONArray(“book”).getJSONObject(i).get(“title”);
+
+Senario 2:
+
+JSON Array -> JSON Object 
+
+JSONArray jarr = new JSONArray(res.asString[]);
+
+jarr.getJSONObject(2).get(“name”);
+
+Scenario 3:
+
+JSON Array -> JSON Objects (here JSON Objects contains JSON Array) 
+
+JSONArray jarr = new JSONArray(res.asString[]);
+
+jarr.getJSONObject(0).getJSONArray(“courses”).get(1); 
+

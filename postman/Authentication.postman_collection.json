@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "04af0365-a4e7-4dd7-8736-74c566a5e12a",
+		"name": "Authentication",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18272812"
+	},
+	"item": [
+		{
+			"name": "Basic Authentication",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "postman",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://postman-echo.com/basic-auth",
+					"protocol": "https",
+					"host": [
+						"postman-echo",
+						"com"
+					],
+					"path": [
+						"basic-auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BearerTokenAuth_Github",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "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",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.github.com/user/repos",
+					"protocol": "https",
+					"host": [
+						"api",
+						"github",
+						"com"
+					],
+					"path": [
+						"user",
+						"repos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/forecast/daily?q=München,DE&appid={API key}",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"forecast",
+						"daily"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "München,DE"
+						},
+						{
+							"key": "appid",
+							"value": "{API key}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/store",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"store"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/students",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"students"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
