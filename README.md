@@ -243,3 +243,22 @@ JSONArray jarr = new JSONArray(res.asString[]);
 
 jarr.getJSONObject(0).getJSONArray(“courses”).get(1); 
 
+# API Chaining:
+
+Use TestNG feature i.e. ‘ITestContext context’.
+Ex: context.setAttribute("user_id", id);
+
+Ex: void tes_createUser(ITestContext context)
+ 
+context.setAttribute("user_id", id);
+void test_deleteUser(ITestContext context)
+int id = (Integer) context.getAttribute("user_id");
+
+For Test Level: context.setAttribute();
+
+For Suite Level: context.getSuite().setAttribute();
+
+Ex: 
+context.setAttribute("user_id", id);
+context.getSuite().setAttribute("user_id", id);
+int id = (Integer) context.getSuite().getAttribute("user_id");
