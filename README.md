@@ -262,3 +262,6 @@ Ex:
 context.setAttribute("user_id", id);
 context.getSuite().setAttribute("user_id", id);
 int id = (Integer) context.getSuite().getAttribute("user_id");
+
+# Rest Assured Framework Design
+![alt text](image.png)
