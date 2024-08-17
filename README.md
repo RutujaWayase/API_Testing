@@ -265,3 +265,6 @@ int id = (Integer) context.getSuite().getAttribute("user_id");
 
 # Rest Assured Framework Design
 ![alt text](image.png)
+
+Approach 2 using properties file
+![alt text](image-1.png)
