@@ -38,5 +38,28 @@ public class UserTests {
 		
 		Assert.assertEquals(response.getStatusCode(), 200);
 	}
+	
+	@Test(priority=2)
+	public void testGetUserByName() {
+		Response response = UserEndPoints.readUser(this.userPayload.getUsername());
+		response.then().log().all();
+		//response.statusCode();
+		Assert.assertEquals(response.getStatusCode(), 200);
+	}
+	
+	@Test(priority=3)
+	public void testUpdateUserByName() {
+		//update data using payload
+		userPayload.setFirstName(faker.name().firstName());
+		userPayload.setLastname(faker.name().lastName());
+		userPayload.setEmail(faker.internet().safeEmailAddress());
+		
+		
+		Response response = UserEndPoints.updateUser(this.userPayload.getUsername(), userPayload);
+		response.then().log().all();
+		
+		
+		Assert.assertEquals(response.getStatusCode(), 200);
+	}
 
 }
