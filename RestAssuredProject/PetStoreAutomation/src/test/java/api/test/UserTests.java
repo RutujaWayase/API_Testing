@@ -57,8 +57,18 @@ public class UserTests {
 		
 		Response response = UserEndPoints.updateUser(this.userPayload.getUsername(), userPayload);
 		response.then().log().all();
+		//response.then().log().body().statusCode(200);
 		
+		Assert.assertEquals(response.getStatusCode(), 200);
 		
+		//Checking data after update
+		Response responseAfterUpdate = UserEndPoints.readUser(this.userPayload.getUsername());
+		Assert.assertEquals(responseAfterUpdate.getStatusCode(), 200);
+	}
+	
+	@Test(priority=4)
+	public void testDeleteUserByName() {
+		Response response = UserEndPoints.deleteUser(this.userPayload.getUsername());
 		Assert.assertEquals(response.getStatusCode(), 200);
 	}
 
