@@ -70,6 +70,6 @@ public class UserTests {
 	public void testDeleteUserByName() {
 		Response response = UserEndPoints.deleteUser(this.userPayload.getUsername());
 		Assert.assertEquals(response.getStatusCode(), 200);
-	}
+	} 
 
 }
