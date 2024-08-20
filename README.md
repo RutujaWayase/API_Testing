@@ -268,3 +268,5 @@ int id = (Integer) context.getSuite().getAttribute("user_id");
 
 Approach 2 using properties file
 ![alt text](image-1.png)
+
+
