@@ -8,34 +8,11 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test1</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">4,087</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">Test2</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">8</td><td></td><td></td></tr>
-<tr><td><a href="#t2">Test3</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">76</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t3">Test4</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">7</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">0</th><th class="num">0</th><th class="num">0</th><th class="num attn">4</th><th class="num">4,178</th><th colspan="2"></th></tr>
+<tr><th colspan="8">Default suite</th></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">3,143</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test1 &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">day8RestAssuredAPIChaining.CreateUser</td><td><a href="#m0">tes_createUser</a></td><td rowspan="1">1723833473918</td><td rowspan="1">4043</td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">Test2 &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">day8RestAssuredAPIChaining.GetUser</td><td><a href="#m1">test_getUser</a></td><td rowspan="1">1723833478051</td><td rowspan="1">1</td></tr></tbody>
-<tbody id="t2"><tr><th colspan="4">Test3 &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">day8RestAssuredAPIChaining.UpdateUser</td><td><a href="#m2">test_updateUser</a></td><td rowspan="1">1723833478065</td><td rowspan="1">71</td></tr></tbody>
-<tbody id="t3"><tr><th colspan="4">Test4 &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">day8RestAssuredAPIChaining.DeleteUser</td><td><a href="#m3">test_deleteUser</a></td><td rowspan="1">1723833478155</td><td rowspan="1">2</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">revise.HTTPRequest</td><td><a href="#m0">getUsers</a></td><td rowspan="1">1729879225127</td><td rowspan="1">3099</td></tr></tbody>
 </table>
-<h2>Test1</h2><h3 id="m0">day8RestAssuredAPIChaining.CreateUser#tes_createUser</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>org.testng.TestRunner@302552ec</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;java.lang.Integer.intValue()&quot; because the return value of &quot;io.restassured.internal.common.path.ObjectConverter.convertObjectTo(Object, java.lang.Class)&quot; is null
-	at io.restassured.path.json.JsonPath.getInt(JsonPath.java:245)
-	at day8RestAssuredAPIChaining.CreateUser.tes_createUser(CreateUser.java:38)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>Test2</h2><h3 id="m1">day8RestAssuredAPIChaining.GetUser#test_getUser</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>org.testng.TestRunner@3eff6846</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;java.lang.Integer.intValue()&quot; because the return value of &quot;org.testng.ISuite.getAttribute(String)&quot; is null
-	at day8RestAssuredAPIChaining.GetUser.test_getUser(GetUser.java:16)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>Test3</h2><h3 id="m2">day8RestAssuredAPIChaining.UpdateUser#test_updateUser</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>org.testng.TestRunner@5f1f0ee6</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;java.lang.Integer.intValue()&quot; because the return value of &quot;org.testng.ISuite.getAttribute(String)&quot; is null
-	at day8RestAssuredAPIChaining.UpdateUser.test_updateUser(UpdateUser.java:34)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>Test4</h2><h3 id="m3">day8RestAssuredAPIChaining.DeleteUser#test_deleteUser</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>org.testng.TestRunner@1d126f07</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;java.lang.Integer.intValue()&quot; because the return value of &quot;org.testng.ISuite.getAttribute(String)&quot; is null
-	at day8RestAssuredAPIChaining.DeleteUser.test_deleteUser(DeleteUser.java:21)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Default test</h2><h3 id="m0">revise.HTTPRequest#getUsers</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
